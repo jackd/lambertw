@@ -39,6 +39,6 @@ def lambertw(z):
 
 	def grad_fn(dy):
 		print('Calling grad_fn')
-		return w / (z*(1 + w))
+		return dy * w / (z*(1 + w))
 
 	return w, grad_fn
